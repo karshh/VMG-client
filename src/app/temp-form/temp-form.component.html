@@ -1,0 +1,26 @@
+<div class="container">
+	
+	<div>
+		<form [formGroup]="tempForm" (ngSubmit)="submit()" class="col-lg-4 col-md-4 col-sm-8">
+			<h4>Temperature</h4>
+			<br>
+
+			<div class="form-group">
+    			<label for="celcius">Celcius</label>
+				<input type="number" id="celcius" name="celcius" (keyup)="submitTempForm('farenhiet')" [formControl]="celcius" class="form-control"> 
+  				<input type="range" min="0" max="100" value="50" class="slider" name="celcius" (change)="submitTempForm('farenhiet')" [formControl]="celcius">
+			</div>
+
+			<div class="form-group">
+    			<label for="farenhiet">Farenhiet</label>
+				<input type="number" id="farenhiet" name="farenhiet" (keyup)="submitTempForm('celcius')" [formControl]="farenhiet" class="form-control"> 
+  				<input type="range" min="32" max="212" class="slider" name="farenhiet" (change)="submitTempForm('celcius')" [formControl]="farenhiet">
+			</div>
+
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+
+		</form>
+	</div>
+</div>
