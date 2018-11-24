@@ -40,8 +40,4 @@ export class TempFormComponent implements OnInit {
 
 		return false;
 	}
-
-	submit() {
-		return false;
-	}
 }

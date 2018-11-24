@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs/Rx';
 import { WebsocketService } from './websocket.service';
 
-const URL = 'ws://vmg-server.usharma.ca';
+const URL = 'ws://vmg-server.usharma.ca/';
 
 export interface Message {
 	celcius: string,
